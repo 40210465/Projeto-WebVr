@@ -1,0 +1,47 @@
+# Material file for mabel9.obj
+
+newmtl initialShadingGroup
+	Ns 1
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 1.0 1.0 1.0
+	map_Kd MabelShirt_Color.jpg
+
+newmtl Material01
+	Ns 100
+	d 1
+	illum 2
+	Kd 0.8 0.8 0.8
+	Ks 0.0 0.0 0.0
+	Ka 1.0 1.0 1.0
+	map_Kd MabelLeg_Color.jpg
+
+newmtl Material02
+	Ns 0
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 1.0 1.0 1.0
+	map_Kd Mabel_Text.png
+
+newmtl Material03
+	Ns 100
+	d 1
+	illum 2
+	Kd 1.0 1.0 1.0
+	Ks 0.0 0.0 0.0
+	Ka 1.0 1.0 1.0
+	map_Kd Mabel_Text.png
+
+newmtl Material04
+	Ns 0
+	d 1
+	illum 2
+	Kd 0.752941 0.752941 0.752941
+	Ks 0.0 0.0 0.0
+	Ka 1.0 1.0 1.0
+	map_Kd Mabel_Text.png
+

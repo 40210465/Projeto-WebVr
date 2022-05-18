@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!-- para  eventos -->
+    <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+    <title>TESTES WEB-VR</title>
+</head>
+<body>
+    <a-scene>
+        	<!-- Camera -->
+		<a-camera>
+			<!-- Representação visual do Cursor -->
+			<a-entity cursor position="0 0 -1"
+					  geometry="primitive: sphere; radius: 0.015"
+					  material="color: #000000; shader: flat; opacity: 0.5">
+			</a-entity>
+		</a-camera>
+
+<!-- outro atalho no clique -->
+<a-link href="/link.html" id="changePage"
+material="shader:  portal;  side:  double;  offset:  [object Object];  repeat:  [object Object];  transparent:  true;  backgroundColor:  #000000;  strokeColor:  #000000"
+link="visualAspectEnabled:  true;  href:  /link.html;  backgroundColor:  #000000;  borderColor:  #000000;  highlightedColor:  #000000"
+></a-link>
+
+
+        <a-assets>
+            <img id="gravityfalls" src="/descarregar (1).jpg">
+        </a-assets>
+        <a-image
+        position="0 1.504 0.006" 
+        src="#gravityfalls" 
+        width="2.000" 
+        heigth="3.000"
+        >
+        <!-- texto -->
+        <a-entity
+        position="0.080 -1.238 0.003"
+        text="value: Gravity Falls;
+        color: #000000;
+        align:center;
+        wrapCount:25.000"
+        geometry="primitive: plane;
+        width: auto;
+        height: 0.5"
+        material="color:#fffffff; shader: flat;
+        visible:true"
+        >
+
+        </a-entity>
+    </a-image>
+
+        <a-plane
+        color="#805b5b"
+        rotation="-90.000 0.000 0.000"
+        geometry="primitive:  plane;  width:  30;  height:  30"
+        position="0 0.001 0">
+        </a-plane>
+
+
+        <a-box
+        color="#000000"
+        position="0.080 1.227 -0.051"
+        scale="1.000 1.000 1.000"
+        depth="0.080"
+        height="2.760"
+        width="3.520">
+        </a-box>
+
+        <!--botão para clicar-->
+        <a-box
+        color="red"
+        position="0.088 0.788 0.015"
+        scale="1.000 1.000 1.000"
+        depth="0.130"
+        height="0.170"
+        width="0.250"
+        event-set-changePage="_event: click; _target: #changePage">
+        </a-box>
+
+    </a-scene>
+    <!-- placa rotação colocar proprieddades -->
+    <!-- <a-entity position="0.08 -1.238 0.07732" text="value: Gravity Falls; color: #000000; align: center; wrapCount: 25" geometry="primitive: plane; height: 0.5" material="color: #fffffff; shader: flat" rotation="-40 0 0">
+
+    </a-entity> -->
+    <!-- scripts -->
+    <script>
+        
+    </script>
+</body>
+</html>
