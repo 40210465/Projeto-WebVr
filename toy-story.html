@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="museum" src="scene3.gltf"></a-asset-item>
+            <a-asset-item id="woddy" src="scene12.gltf"></a-asset-item>
+            <a-asset-item id="jessie" src="scene13.gltf"></a-asset-item>
+            <a-asset-item id="buzz" src="scene14.gltf"></a-asset-item>
+            <a-asset-item id="mrpotato" src="scene15.gltf"></a-asset-item>
+            <img id="disney" src="img\disney.jpg">
+        </a-assets>
+
+        <a-link href="/index.html" id="changepage"
+        material="shader:  portal;  side:  double;  offset:  [object Object];  repeat:  [object Object];  transparent:  true;  backgroundColor:  #000000;  strokeColor:  #000000"
+        link="visualAspectEnabled:  true;  href:  /index.html;  backgroundColor:  #000000;  borderColor:  #000000;  highlightedColor:  #000000"
+        position="0 0 -12.5"
+        ></a-link>
+        <a-camera>
+            <!-- Representação visual do Cursor -->
+            <a-entity cursor position="0 0 -1"
+                      geometry="primitive: sphere; radius: 0.015"
+                      material="color: #fff; shader: flat; opacity: 0.5">
+            </a-entity>
+        </a-camera>
+
+        <a-entity id="museum"
+          position="0 0 0"
+          rotation="0 90 0"
+          scale="0.02 0.02 0.02"
+          gltf-model="#museum">
+        </a-entity>
+
+        <a-box id="portal"
+          src="#disney"
+          side="front"
+          position="0 1.5 -13"
+          width="2" height="4" depth="0.1"
+          ></a-box>
+
+          <a-entity id="woddy"
+          position="-3 0 -2.5"
+          rotation="0 90 0"
+          scale="1 1 1"
+          gltf-model="#woddy">
+          </a-entity>
+
+          <a-entity
+          position="-2.5 0.2 -2"
+          rotation="-30 90 0"
+          text="value: Woody;
+          color: #000000;
+          align:center;
+          wrapCount:25.000"
+          geometry="primitive: plane;
+          width: auto;
+          height: 0.5"
+          material="color:#fffffff; ssssshader: flat;
+          visible:true"
+          ></a-entity>
+
+          <a-entity id="jessie"
+          position="3 0 -2.5"
+          rotation="0 270 0"
+          scale="1 1 1"
+          gltf-model="#jessie">
+          </a-entity>
+
+          <a-entity
+          position="2.5 0.2 -2"
+          rotation="-30 270 0"
+          text="value: Jessie;
+          color: #000000;
+          align:center;
+          wrapCount:25.000"
+          geometry="primitive: plane;
+          width: auto;
+          height: 0.5"
+          material="color:#fffffff; ssssshader: flat;
+          visible:true"
+          ></a-entity>
+
+          <a-entity id="buzz"
+          position="-3 1.4 -6"
+          rotation="0 90 0"
+          scale="0.004 0.004 0.004"
+          gltf-model="#buzz">
+          </a-entity>
+
+          <a-entity
+          position="-2.5 0.2 -5.5"
+          rotation="-30 90 0"
+          text="value: Buzz;
+          color: #000000;
+          align:center;
+          wrapCount:25.000"
+          geometry="primitive: plane;
+          width: auto;
+          height: 0.5"
+          material="color:#fffffff; ssssshader: flat;
+          visible:true"
+          ></a-entity>
+
+          <a-entity id="mrpotato"
+          position="3.2 -0.2 -6.2"
+          rotation="0 270 0"
+          scale="0.2 0.2 0.2"
+          gltf-model="#mrpotato">
+          </a-entity>
+
+          <a-entity
+          position="2.5 0.2 -5.5"
+          rotation="-30 270 0"
+          text="value: Mr Potato;
+          color: #000000;
+          align:center;
+          wrapCount:25.000"
+          geometry="primitive: plane;
+          width: auto;
+          height: 0.5"
+          material="color:#fffffff; ssssshader: flat;
+          visible:true"
+          ></a-entity>
+
+    </a-scene>
+</body>
+</html>

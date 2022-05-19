@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disney</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="museum" src="scene3.gltf"></a-asset-item>
+            <a-asset-item id="warmac" src="scene8.gltf"></a-asset-item>
+            <a-asset-item id="wolverine" src="scene9.gltf"></a-asset-item>
+            <a-asset-item id="spider" src="scene10.gltf"></a-asset-item>
+            <a-asset-item id="ironman" src="scene11.gltf"></a-asset-item>
+            <img id="disney" src="img\disney.jpg">
+        </a-assets>
+
+        <a-link href="/index.html" id="changepage"
+        material="shader:  portal;  side:  double;  offset:  [object Object];  repeat:  [object Object];  transparent:  true;  backgroundColor:  #000000;  strokeColor:  #000000"
+        link="visualAspectEnabled:  true;  href:  /index.html;  backgroundColor:  #000000;  borderColor:  #000000;  highlightedColor:  #000000"
+        position="0 0 -12.5"
+        ></a-link>
+        <a-camera>
+            <!-- Representação visual do Cursor -->
+            <a-entity cursor position="0 0 -1"
+                      geometry="primitive: sphere; radius: 0.015"
+                      material="color: #fff; shader: flat; opacity: 0.5">
+            </a-entity>
+        </a-camera>
+
+        <a-entity id="museum"
+          position="0 0 0"
+          rotation="0 90 0"
+          scale="0.02 0.02 0.02"
+          gltf-model="#museum">
+        </a-entity>
+
+        <a-box id="portal"
+          src="#disney"
+          side="front"
+          position="0 1.5 -13"
+          width="2" height="4" depth="0.1"
+          ></a-box>
+
+          <a-entity id="warmac"
+          position="-3 0 -2.5"
+          rotation="0 0 0"
+          gltf-model="#warmac">
+          </a-entity>
+
+          <a-entity
+          position="-2.5 0.2 -2"
+          rotation="-30 90 0"
+          text="value: War Machine;
+          color: #000000;
+          align:center;
+          wrapCount:25.000"
+          geometry="primitive: plane;
+          width: auto;
+          height: 0.5"
+          material="color:#fffffff; ssssshader: flat;
+          visible:true"
+          ></a-entity>
+
+          <a-entity id="wolverine"
+          position="3 0 -2.5"
+          rotation="0 270 0"
+          scale="3 3 3"
+          gltf-model="#wolverine">
+          </a-entity>
+
+          <a-entity
+          position="2.5 0.2 -2"
+          rotation="-30 270 0"
+          text="value: Wolverine;
+          color: #000000;
+          align:center;
+          wrapCount:25.000"
+          geometry="primitive: plane;
+          width: auto;
+          height: 0.5"
+          material="color:#fffffff; ssssshader: flat;
+          visible:true"
+          ></a-entity>
+
+          <a-entity id="spider"
+          position="-3 0 -6"
+          rotation="0 90 0"
+          scale="1 1 1"
+          gltf-model="#spider">
+          </a-entity>
+
+          <a-entity
+          position="-2.5 0.2 -5.5"
+          rotation="-30 90 0"
+          text="value: Spider-Man;
+          color: #000000;
+          align:center;
+          wrapCount:25.000"
+          geometry="primitive: plane;
+          width: auto;
+          height: 0.5"
+          material="color:#fffffff; ssssshader: flat;
+          visible:true"
+          ></a-entity>
+
+          <a-entity id="ironman"
+          position="3 -0.2 -6"
+          rotation="0 270 0"
+          scale="0.008 0.008 0.008"
+          gltf-model="#ironman">
+          </a-entity>
+
+          <a-entity
+          position="2.5 0.2 -5.5"
+          rotation="-30 270 0"
+          text="value: Iron Man;
+          color: #000000;
+          align:center;
+          wrapCount:25.000"
+          geometry="primitive: plane;
+          width: auto;
+          height: 0.5"
+          material="color:#fffffff; ssssshader: flat;
+          visible:true"
+          ></a-entity>
+
+    </a-scene>
+</body>
+</html>
